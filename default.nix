@@ -17,4 +17,9 @@
   # VeriPB proof checker
   veripb = pkgs.python3Packages.callPackage ./pkgs/veripb { };
   pboxide = pkgs.callPackage ./pkgs/pboxide { };
+
+  # GBD benchmark database
+  gbdc = pkgs.python3Packages.callPackage ./pkgs/gbdc { };
+  # Only the GBDC executable
+  gbdc-tool = pkgs.callPackage ./pkgs/gbdc/tool.nix { };
 }
