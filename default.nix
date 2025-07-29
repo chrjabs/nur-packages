@@ -23,4 +23,7 @@ rec {
   gbdc = pkgs.python3Packages.callPackage ./pkgs/gbdc { };
   # Only the GBDC executable
   gbdc-tool = pkgs.callPackage ./pkgs/gbdc/tool.nix { };
+
+  # Python MIP
+  python-mip = pkgs.python311Packages.callPackage ./pkgs/python-mip { };
 }
