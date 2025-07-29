@@ -8,7 +8,7 @@
 {
   pkgs ? import <nixpkgs> { },
 }:
-{
+rec {
   # The `lib`, `modules`, and `overlays` names are special
   lib = import ./lib { inherit pkgs; }; # functions
   modules = import ./modules; # NixOS modules
@@ -19,6 +19,7 @@
   pboxide = pkgs.callPackage ./pkgs/pboxide { };
 
   # GBD benchmark database
+  gbd = pkgs.python3Packages.callPackage ./pkgs/gbd { inherit gbdc; };
   gbdc = pkgs.python3Packages.callPackage ./pkgs/gbdc { };
   # Only the GBDC executable
   gbdc-tool = pkgs.callPackage ./pkgs/gbdc/tool.nix { };
