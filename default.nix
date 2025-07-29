@@ -16,4 +16,5 @@
 
   # VeriPB proof checker
   veripb = pkgs.python3Packages.callPackage ./pkgs/veripb { };
+  pboxide = pkgs.callPackage ./pkgs/pboxide { };
 }
