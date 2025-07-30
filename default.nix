@@ -21,6 +21,8 @@ rec {
   modules = import ./modules; # NixOS modules
   overlays = import ./overlays; # nixpkgs overlays
 
+  # NOTE: when adding a package here, make sure to also add it in the flake overlay
+
   # VeriPB proof checker
   veripb = pkgs.python3Packages.callPackage ./pkgs/veripb { };
   pboxide = pkgs.callPackage ./pkgs/pboxide { };
