@@ -8,6 +8,10 @@
       url = "github:numtide/treefmt-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    rust-overlay = {
+      url = "github:oxalica/rust-overlay";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -23,7 +27,10 @@
       perSystem =
         { pkgs, ... }:
         let
-          legacyPackages = import ./default.nix { inherit pkgs; };
+          legacyPackages = import ./default.nix {
+            inherit pkgs;
+            inherit (inputs) rust-overlay;
+          };
         in
         {
           inherit legacyPackages;
