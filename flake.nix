@@ -64,6 +64,7 @@
               pboxide
               python-mip
               veripb
+              gimsatul
               ;
           };
 
