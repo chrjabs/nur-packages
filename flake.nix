@@ -65,6 +65,7 @@
               python-mip
               veripb
               gimsatul
+              coveralls
               ;
           };
 
