@@ -46,6 +46,9 @@ rec {
 
   # Clingo python API
   pyclingo = pkgs.python3Packages.callPackage ./pkgs/clingo { };
+
+  # Dodeca static site generator
+  dodeca = pkgs.callPackage ./pkgs/dodeca { };
 }
 // pkgs.lib.attrsets.optionalAttrs (rust-overlay != null) {
   # Kani - Rust model checker

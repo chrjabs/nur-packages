@@ -68,6 +68,7 @@
               cargo-afl
               janus-swi
               pyclingo
+              dodeca
               ;
           };
 
