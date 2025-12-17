@@ -69,6 +69,7 @@
               janus-swi
               pyclingo
               dodeca
+              cargo-fake-rustup
               ;
           };
 
