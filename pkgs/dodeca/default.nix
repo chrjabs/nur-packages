@@ -55,7 +55,7 @@ rustPlatform.buildRustPackage rec {
   src = fetchFromGitHub {
     owner = "bearcove";
     repo = "dodeca";
-    rev = "v${version}";
+    tag = "v${version}";
     hash = "sha256-O5TisKCGyA9MS0I4zD3l9JXQytosxQKlJfoG+pOZL7k=";
   };
 
