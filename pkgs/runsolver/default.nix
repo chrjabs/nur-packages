@@ -1,15 +1,16 @@
 {
   lib,
   stdenv,
+  fetchurl,
   numactl,
 }:
 stdenv.mkDerivation (finalAttrs: {
   pname = "runsolver";
   version = "3.4.1";
 
-  src = builtins.fetchTarball {
+  src = fetchurl {
     url = "https://www.cril.univ-artois.fr/~roussel/runsolver/runsolver-${finalAttrs.version}.tar.bz2";
-    sha256 = "sha256-875zo6TNWajTWrtIWkfc0Wcy3u1xl745JdPPNQCEGkM=";
+    hash = "sha256-b7jIyEnglZO1CanfGq3blLgYf2W7IX/3B8glL93Xni8=";
   };
 
   buildInputs = [
