@@ -59,6 +59,7 @@
               # keep-sorted start
               cargo-afl
               cargo-fake-rustup
+              cargo-minimal-versions
               coveralls
               dblp-tools
               dodeca
